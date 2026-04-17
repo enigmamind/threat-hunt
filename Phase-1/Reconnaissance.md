@@ -21,5 +21,8 @@
 - **Pivoting to IP** : the source IP `85.203.47.86`
    - ![SPL-SRC-IP](SPL-SRC-IP.jpg)
    - when searching it in OSINT using *www.iplocate.io*  turn out to be using VPN node which is dead end as it used to masking the attackers' true location.
-   - 
-
+     - ![VPN](VPN.jpg)
+### Key Findings
+- **Data Exfiltration** : an attacker successesfully downloaded `company_contacts.xlsx`
+- **Impact**: Enables targeted phishing/social engineering leading to high risk to personnel and data
+-
