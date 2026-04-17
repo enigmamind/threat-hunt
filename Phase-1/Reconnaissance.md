@@ -16,8 +16,10 @@
    - we ascending in order to bring the rarest events to the top.
        - `index=botsv2 sourcetype=stream:http site="www.froth.ly" | stats count by http_user_agent | sort + count`
    - **Result** Discovered the **NaenaraBrowser**, a North korean web-browser - a clear indicator of compromise (IOC)
+       - ![SPL-LFO](SPL-LFO.jpg)
 ### Evidence & Pivot
 - **Pivoting to IP** : the source IP `85.203.47.86`
+   - ![SPL-SRC-IP](SPL-SRC-IP.jpg)
    - when searching it in OSINT using *www.iplocate.io*  turn out to be using VPN node which is dead end as it used to masking the attackers' true location.
    - 
 
