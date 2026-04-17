@@ -2,7 +2,7 @@
 ### Objective
 - To invesigate an APT campaign using *botsv2 dataset*
 ### Tools
-- Splunk, OSINT(explore.whatismybrowser.com)
+- Splunk, OSINT(explore.whatismybrowser.com, ipinfo.io or www.iplocate.io)
 
 ### hypothesis
 - Law enforecement entity warned about a certain campaign targeting pulbic or know web-servers using non-standard browsers
@@ -17,4 +17,7 @@
        - `index=botsv2 sourcetype=stream:http site="www.froth.ly" | stats count by http_user_agent | sort + count`
    - **Result** Discovered the **NaenaraBrowser**, a North korean web-browser - a clear indicator of compromise (IOC)
 ### Evidence & Pivot
+- **Pivoting to IP** : the source IP `85.203.47.86`
+   - when searching it in OSINT using *www.iplocate.io*  turn out to be using VPN node which is dead end as it used to masking the attackers' true location.
+   - 
 
