@@ -25,4 +25,4 @@
 ### Key Findings
 - **Data Exfiltration** : an attacker successesfully downloaded `company_contacts.xlsx`
 - **Impact**: Enables targeted phishing/social engineering leading to high risk to personnel and data
-- ![SPL-CONTACT](contact-spl.jpg)
+  ![SPL-CONTACT](contact-spl.jpg)
