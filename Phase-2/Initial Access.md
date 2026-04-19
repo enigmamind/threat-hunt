@@ -18,3 +18,4 @@
 
 - **Header Analysis**
   - content of the email was pasted into MXtoolbox web, the new ip address was extracted `185.83.51.21` then search it via OSINT iplocate.io and domain was called **YMLP** which is email sending service.
+  ![YMLP](YMLP.jpg)
