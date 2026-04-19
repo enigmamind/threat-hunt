@@ -9,11 +9,12 @@
 ### Investigation steps
 - **Phishing Analysis**
   -  Query for smtp logs`index=botsv2 sourcetype=stream:smtp`and interesting field we look at is `attach_filename{} ` which contained **Invoice Zip**
+     ![Email-suspious](invoice-zip.jpg)
   -  **search Strategy**: Identifying email traffic containing suspious attachments.
   -  `index=botsv2 sourcetype=stream:smtp "attach_filename{}"="invoice.zip"| table _time, receiver, sender, src_ip, subject, attach_filename{}`
 - **Key Discovery**
   - Identified four emails sent from `jsmith@urinalysis.com` containing `invoice.zip`
- 
+    ![Email-attached](Suspious-emails_attachments.jpg)
 
 - **Header Analysis**
   - content of the email was pasted into MXtoolbox web, the new ip address was extracted `185.83.51.21` then search it via OSINT iplocate.io and domain was called **YMLP** which is email sending service.
