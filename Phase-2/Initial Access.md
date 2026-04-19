@@ -19,3 +19,12 @@
 - **Header Analysis**
   - content of the email was pasted into MXtoolbox web, the new ip address was extracted `185.83.51.21` then search it via OSINT iplocate.io and domain was called **YMLP** which is email sending service.
   ![YMLP](YMLP.jpg)
+
+- **User Execution**
+- There are four recipients received the attachments, among them executed the attachment.
+- **Search Strategy**
+  - we narrow down the search up to Agust 23
+  - look for any other sourcetypes have logged `invoice.zip` **SPL** `index=botsv2 invoice.zip sourcetype!="stream:smtp"`
+  - Pivoting to sysmon `index=botsv2 sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" invoice.zip| table _time, Computer, User, EventDescription`
+  - We discovered that a user **Billy Tun** with email address *btun@froth.ky* interacted with the attachment, which triggered a word document `invoice.doc` that spawned a malicious process
+  - 
