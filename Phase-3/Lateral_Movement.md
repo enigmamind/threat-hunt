@@ -18,4 +18,5 @@
 - To identify the lateral movement, **Transaction Search** was used to correlate **Network Logon** events `Event ID 4624, Logon Type 3` with subsequent **process creation events**.
 - If a user authenticates over the network(Logon Type 3-event) and immediately caused a process on the target host, this behaviour can indicate remote execution or lateral movement
 - **Discovery**: Through this correlation, two compromised hosts **Venus** and **wrk-klagerf** where the attacker used compromised account service3 to authenticate and execute malicious processes
+  ![Transaction-search](Transaction_Search.jpg)
 
