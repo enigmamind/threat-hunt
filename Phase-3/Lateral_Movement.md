@@ -19,4 +19,11 @@
 - If a user authenticates over the network(Logon Type 3-event) and immediately caused a process on the target host, this behaviour can indicate remote execution or lateral movement
 - **Discovery**: Through this correlation, two compromised hosts **Venus** and **wrk-klagerf** where the attacker used compromised account service3 to authenticate and execute malicious processes
   ![Transaction-search](Transaction_Search.jpg)
+- **Identify C2 framework**
+- The payload used was obsfuscated powershell script running on the target hosts
+- **The Analysis**
+  - when decoded the base64 in Cyberchef the script revealed
+    - **AMSI ByPass** - disabled security scanning
+    - **RC4 Decryption** - a small part of malware that unscrambles its hidden final piece
+    - Judged by the script was written, you can tell it came from a hacking toolkit called **Powershell Empire** notorious for post-exploitation tool.
 
