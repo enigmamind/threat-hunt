@@ -4,3 +4,4 @@ A comprehensive investigation of multi-stage cyber attack using splunk. This pro
 
 ### The Breakdown
 - **Reconnaissance** [Phase-1](https://github.com/enigmamind/threat-hunt/tree/main/Phase-1/Reconnaissance.md)
+- **Initila Access** [Phase-2](https://github.com/enigmamind/threat-hunt/tree/main/Phase-2//Initial%20Access.md)
