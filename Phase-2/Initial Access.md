@@ -30,4 +30,11 @@
     ![Billy](Evidence-billy-tun.jpg)
 - **Malware Deobfuscation**
 - We extracted the malware content using Splunk with the following search **SPL** `index=botsv2 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" host="wrk-btun"| table _time, EventDescription, CommandLine` which identify suspicious event and extract command line activity associated with the malware
-- 
+- Using the **Cyberchef** website, revealed the script intent
+  - **AMSI** to disabled the antimalware scan interface
+  - **CS callback** this script was designed to download a payload from a new C2IP `45.77.65.211`
+   ![Malware](Malware-Deobfuscation.jpg)
+### Key Findings
+- **Patient Zero** the Billy Tuns's workstation as the initial point of compromised
+- **Tactic**: Confirmed Spearphishing Attachment (T1566.001) and User Execution (T1204.002).
+- **IOC**: Discovered a Command & Control (C2) IP (`45.77.65.211`) to be used for the Part 3 investigation.
