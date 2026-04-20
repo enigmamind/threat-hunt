@@ -26,4 +26,5 @@
     - **AMSI ByPass** - disabled security scanning
     - **RC4 Decryption** - a small part of malware that unscrambles its hidden final piece
     - Judged by the script was written, you can tell it came from a hacking toolkit called **Powershell Empire** notorious for post-exploitation tool.
+    - 
 
