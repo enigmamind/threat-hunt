@@ -26,5 +26,9 @@
     - **AMSI ByPass** - disabled security scanning
     - **RC4 Decryption** - a small part of malware that unscrambles its hidden final piece
     - Judged by the script was written, you can tell it came from a hacking toolkit called **Powershell Empire** notorious for post-exploitation tool.
-    - 
-
+      ![PowerShell](PowerShell-Empire.jpg)
+### Final Investigation Summary
+- **Patient Zero**: `wrk-btun` (Billy Tun)
+- **Lateral Targets**: `wrk-klagerf` and `venus`
+- **Attacker Infrastructure**: C2 server located at `45.77.65.211`
+- **Conclusion**: The attacker successfully moved from a single click phishing attachment to controlling multiple host across the domain
