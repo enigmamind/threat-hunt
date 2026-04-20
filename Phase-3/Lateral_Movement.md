@@ -14,4 +14,8 @@
   - **SPL** `index=botsv2 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" EventCode=1 Image="C:\\Windows\\System32\\wbem\\WmiPrvSE.exe" ParentImage="C:\\Windows\\System32\\svchost.exe"`
 - **Result** identified 11 suspicious hits on a new host `wrk-klagerf` (Kevin Lagerfield)
   ![Suspicous-host](Suspious-host.jpg)
+### Coorelating Logons with Execution
+- To identify the lateral movement, **Transaction Search** was used to correlate **Network Logon** events `Event ID 4624, Logon Type 3` with subsequent **process creation events**.
+- If a user authenticates over the network(Logon Type 3-event) and immediately caused a process on the target host, this behaviour can indicate remote execution or lateral movement
+- **Discovery**: Through this correlation, two compromised hosts **Venus** and **wrk-klagerf** where the attacker used compromised account service3 to authenticate and execute malicious processes
 
