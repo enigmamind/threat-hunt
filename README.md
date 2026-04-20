@@ -1,2 +1,3 @@
-### Threat Hunting Exercise (BOTs V2 dataset)
-This project is detailed to show a threat hunting exercise using BOTsv2 dataset. The investigation follows a sophisticated adversary from initial reconnaissance through to lateral movement within a corporate network. 
+### Threat Hunting: Investigating an APT Campaign (Botsv2)
+A comprehensive investigation of multi-stage cyber attack using splunk. This project aimed to show an adversary from initial reconnaissance and phishing to lateral movement via WMI and command & Control.
+![Attack](Attack-MAP.png)
