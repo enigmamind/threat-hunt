@@ -28,4 +28,6 @@
   - Pivoting to sysmon `index=botsv2 sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" invoice.zip| table _time, Computer, User, EventDescription`
   - We discovered that a user **Billy Tun** with email address *btun@froth.ky* interacted with the attachment, which triggered a word document `invoice.doc` that spawned a malicious process
     ![Billy](Evidence-billy-tun.jpg)
-- **Malware Deobfuscation** 
+- **Malware Deobfuscation**
+- We extracted the malware content using Splunk with the following search **SPL** `index=botsv2 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" host="wrk-btun"| table _time, EventDescription, CommandLine` which identify suspicious event and extract command line activity associated with the malware
+- 
