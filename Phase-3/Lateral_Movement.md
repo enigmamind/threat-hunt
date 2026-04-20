@@ -9,7 +9,7 @@
 
 ### Investigation Steps
 - **Hunting for WMI Abuse**
-- timeline is the same ***August 23 - August 24***
+  - timeline is the same ***August 23 - August 24***
 - **Search Strategy** Searching for suspicious `wmiprvse.exe` processes caused by `svchost.exe`.
   - **SPL** `index=botsv2 sourcetype="xmlwineventlog:microsoft-windows-sysmon/operational" EventCode=1 Image="C:\\Windows\\System32\\wbem\\WmiPrvSE.exe" ParentImage="C:\\Windows\\System32\\svchost.exe"`
 - **Result** identified 11 suspicious hits on a new host `wrk-klagerf` (Kevin Lagerfield)
